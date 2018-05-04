@@ -4,23 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Alura Typer</title>
 </head>
 <body>
-    <h1>Alura Typer</h1>
-    <p class="frase">Lorem ipsum dolor sit am  et, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <ul class="informacoes">
-        <li><span id="tamanho-frase">0</span> palavras</li>
-        <li><span id="tempo-digitacao">10</span> segundos</li>
-    </ul>
+    <div class="container">
+        <h1>Alura Typer</h1>
+        <p class="frase">Lorem ipsum dolor sit am  et, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <ul class="informacoes center">
+            <li><i class="small material-icons icones">description</i> <span id="tamanho-frase">0</span> palavras</li>
+            <li><i class="small material-icons icones">query_builder</i> <span id="tempo-digitacao">10</span> segundos</li>
+        </ul>
+    
+        <textarea cols="40" rows="8" class="campo-digitacao"></textarea>
+        <a id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
+            <i class="material-icons">restore</i>
+        </a>
+    
+        <ul class="center">
+            <li><span class="contador-caracteres">0</span> caracteres</li>
+            <li><span class="contador-palavras">0</span> palavras</li>
+        </ul>
+    </div>
 
-    <textarea cols="40" rows="8" class="campo-digitacao"></textarea>
-    <button id="botao-reiniciar">Reiniciar Jogo</button>
-
-    <ul>
-        <li><span class="contador-caracteres">0</span> caracteres</li>
-        <li><span class="contador-palavras">0</span> palavras</li>
-    </ul>
+    <section class="placar">
+        <h3 class="center">Placar</h3>
+        <table class="centered bordered">
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>No. de palavras</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Usuario Exemplo</td>
+                    <td>99</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>    
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
